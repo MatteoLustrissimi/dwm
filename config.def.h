@@ -6,7 +6,6 @@ static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[]          = { "JetBrains Mono:size=12", "IPAMincho:size=12" };
-static const char dmenufont[]       = "JetBrains Mono:size=12";
 static const char col_gray1[]       = "#282828";
 static const char col_gray2[]       = "#504945";
 static const char col_gray3[]       = "#bdae93";
@@ -56,7 +55,7 @@ static const Layout layouts[] = {
 #define SHCMD(cmd) { .v = (const char*[]){ "/bin/sh", "-c", cmd, NULL } }
 
 /* commands */
-static const char *dmenucmd[] = { "dmenu_run", "-fn", dmenufont, NULL };
+static const char *dmenucmd[] = { "dmenu_run", "-fn", NULL };
 static const char *termcmd[]  = { "st", NULL };
 
 static const Key keys[] = {
